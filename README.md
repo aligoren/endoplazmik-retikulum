@@ -1,5 +1,7 @@
 # endoplazmik-retikulum
 
+![](https://raw.githubusercontent.com/ebrugulec/endoplazmik-retikulum/master/endoplazmik-gif.gif)
+
 ## Project setup
 ```
 yarn install

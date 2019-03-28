@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css?family=Lilita+One');
+
+// house colors
+$lightBlue: #bfe4ed;
+$darkBlue: #65a1dc;
+$lightPink: #fdd4d6;
+$darkPink: #eab0e0;
+$lightPurple: #c1b2d3;
+$darkPurple: #745e8d;
+$lightBrown: #d0c9a7;
+$mediumBrown: #a59966;
+$darkBrown: #534f33;
+$lightGreen: #92d955;
+$darkGreen: #84c950;
+$yellow: #f3eb8a;
+$red: #a74a43;
+$white: #fdfdff;
+$shadow: #1E2019;
+
+// balloon colors
+$balloonRed: #f2353b;
+$balloonYellow: #E6C229;
+$balloonOrange: #F17105;
+$balloonPurple: #6610F2;
+$balloonBlue: #1A8FE3;
+$balloonLightBlue: #60b0ff;
+$balloonMediumBlue: #208AAE;
+$balloonGreen: #00A878;
+$balloonLightGreen: #D8F1A0;
+$balloonRoyalPurple: #88498F;
+$balloonRoyalBlue: #33658A;
+$balloonGold: #F6AE2D;
+$balloonPeach: #FFA987;
+$balloonDarkRed: #A22522;
+$balloonDarkPink: #E2294F;
+$balloonLightPink: #FF2C55;
+$balloonLightPurple: #DCD6F7;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  align-items: center;
+  background-color: $lightBlue;
+  font-family: 'Lilita One', cursive;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+
+h1 {
+  color: $white;
+  text-shadow: 0.2rem 0.2rem $darkPurple;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.house {
+  animation: house-hover ease-in-out 1.7s infinite;
+  background-image:
+    linear-gradient($mediumBrown, $mediumBrown), // top yellow window brown top
+    linear-gradient($mediumBrown, $mediumBrown), // top yellow window brown bottom
+    linear-gradient($darkPink, $darkPink), // top yellow window pink top
+    linear-gradient($darkPink, $darkPink), // top yellow window pink bottom
+    linear-gradient($white, $white), // top yellow window frame
+    linear-gradient(123deg, transparent 50%, $yellow 50%), // yellow roof main
+    linear-gradient(58deg, $yellow 50%, transparent 50%), // yellow roof main
+    radial-gradient(farthest-corner at 0% 7%, transparent 60%, $yellow 40%), // yellow roof thing
+    radial-gradient(farthest-corner at 93% 0%, transparent 60%, $yellow 40%), // yellow roof thing
+    linear-gradient(123deg, transparent 62%, $lightPurple 62% 66%, white 66% 70%, $darkBlue 70%), // roof outline
+    linear-gradient(58deg, $darkBlue 25% 29%, $white 29% 33%, $lightPurple 33% 38%, transparent 38%), // roof outline
+    linear-gradient($mediumBrown, $mediumBrown), // bottom green window brown top
+    linear-gradient($mediumBrown, $mediumBrown), // bottom green window brown bottom
+    linear-gradient($darkPink, $darkPink), // bottom green window pink top
+    linear-gradient($darkPink, $darkPink), // bottom green window pink bottom
+    linear-gradient($white, $white), // bottom green window frame
+    linear-gradient($white, $white), // white beam across green
+    linear-gradient(90deg, $darkGreen 25%, $lightGreen 25% 75%, $darkGreen 75%), // green front
+    linear-gradient($white 15%, transparent 15% 42%, $white 42% 57%, transparent 57% 85%, $white 85% 100%), // white stair
+    linear-gradient($white, $white), // white door frame top
+    linear-gradient(90deg, $white 17%, $red 17% 83%, $white 83%), // white door frame main
+    linear-gradient($darkBrown, $darkBrown), // brown stairs
+    linear-gradient(90deg, $white 2%, transparent 2% 13%, $white 13% 16%, transparent 16% 27%, $white 12% 15%, transparent 15% 26%, $white 26% 29%, transparent 29% 40%, $white 40% 43%, transparent 43% 54%, $white 54% 57%, transparent 57% 68%, $white 68% 71%, transparent 71% 82%, $white 82% 85%, transparent 85% 96%, $white 96% 99%), // top white beam
+    linear-gradient(90deg, $white 10%, transparent 10% 30%, $white 30% 40%, transparent 40% 60%, $white 60% 70%, transparent 70% 94%, $white 94%), // bottom white beam
+    linear-gradient($mediumBrown, $mediumBrown), // brown thing at bottom left
+    linear-gradient($darkPink, $darkPink), // pink thing at bottom left
+    linear-gradient($white, $white), // white railing
+    linear-gradient($white, $white), // right white beam
+    linear-gradient($mediumBrown, $mediumBrown), // bottom left window brown top
+    linear-gradient($mediumBrown, $mediumBrown), // bottom left window brown bottom
+    linear-gradient($darkPink, $darkPink), // bottom left window pink frame top
+    linear-gradient($darkPink, $darkPink), // bottom left window prink frame bottom
+    linear-gradient($white, $white), // bottom left window white window frame
+    linear-gradient($white, $white), // left white beam
+    linear-gradient($white, $white), // white horizontal ladder top
+    linear-gradient($white, $white), // white horizontal ladder bottom
+    linear-gradient($lightBrown, $lightBrown), // front wood floor
+    linear-gradient($lightPink, $lightPink), // pink wall
+    linear-gradient($darkBlue, $darkBlue), // dark blue wall
+    linear-gradient($mediumBrown, $mediumBrown), // left window brown top
+    linear-gradient($mediumBrown, $mediumBrown), // left window brown bottom
+    linear-gradient($darkPink, $darkPink), // left window pink frame top
+    linear-gradient($darkPink, $darkPink), // left window prink frame bottom
+    linear-gradient($white, $white), // left window white window frame
+    linear-gradient(123deg, transparent 42%, $yellow 42%), // left window yellow triangle
+    linear-gradient(58deg, $yellow 57%, transparent 57%), // left window yellow triangle
+    linear-gradient($yellow, $yellow), // left window square
+    linear-gradient(123deg, transparent 62%, $lightPurple 62% 66%, white 66% 70%, $darkPurple 70%), // small roof outline
+    linear-gradient(58deg, $darkPurple 25% 29%, $white 29% 33%, $lightPurple 33% 37%, transparent 37%), // small roof outline
+    linear-gradient($red, $red), // chimney
+    linear-gradient(105deg, transparent 20%, $darkPurple 20%), // roof
+    linear-gradient($darkPurple 80%, transparent 80%), // roof
+    linear-gradient($darkPurple, $darkPurple) // roof
+    ;
+  background-position:
+    69.7% 25.7%, // top yellow window brown top
+    69.2% 34%, // top yellow window brown bottom
+    70% 25.3%, // top yellow window pink top
+    69.6% 34%, // top yellow window pink bottom
+    70.5% 27%, // top yellow window frame
+    64.1% -13%, // yellow roof main
+    78.8% -12%, // yellow roof main
+    54% 34.9%, // yellow roof thing
+    85.8% 34.9%, // yellow roof thing
+    48% 0%, // roof outline
+    114.7% 0%, // roof outline
+    69.7% 59%, // bottom green window brown top
+    69.2% 67.5%, // bottom green window brown bottom
+    70% 59%, // bottom green window pink top
+    69.6% 68%, // bottom green window pink bottom
+    70.5% 65%, // bottom green window frame
+    77% 79%, // white beam across green
+    76% 77%, // green front,
+    40.5% 86%, // white stair 
+    42.5% 55%, // white door frame top
+    42.5% 69%, // white door frame main
+    41% 86%, // brown stairs
+    28% 50%, // top white beam
+    21% 73.7%, // bottom white beam
+    20.8% 85%, // brown thing at bottom left
+    19.8% 86%, // pink thing at bottom left
+    22% 70%, // white railing
+    33% 65%, // right white beam
+    25% 59.6%, // bottom left window brown top
+    25.2% 63.8%, // bottom left window brown bottom
+    24.6% 59.8%, // bottom left window pink frame top
+    25% 63.6%, // bottom left window pink frame bottom
+    24% 62%, // bottom left window white window frame
+    17.2% 59.8%, // left white beam
+    33% 47%, // white horizontal ladder top
+    33% 52%, // white horizontal ladder bottom
+    30.3% 79%, // front wood floor
+    33% 68%, // pink wall
+    33% 41%, // dark blue wall
+    31.8% 20%, // left window brown top
+    31.8% 23.6%, // left window brown bottom
+    31.6% 19.5%, // left window pink frame top
+    31.6% 23.6%, // left window pink frame bottom
+    31.4% 19.5%, // left window white window frame
+    29.2% 10.8%, // left window yellow triangle
+    33.8% 10.8%, // left window yellow triangle
+    30.6% 21%, // left window square
+    25.8% 5.3%, // small roof outline
+    35.6% 5.3%, // small roof outline
+    50% 0%, // chimney
+    12% 15%, // roof
+    60% 16.4%, // roof
+    87% 14% // roof
+   ;
+  background-repeat: no-repeat;
+  background-size:
+    6.5% 7%, // top yellow window brown top
+    4.5% 6%, // top yellow window brown bottom
+    8% 9%, // top yellow window pink top
+    6.5% 8%, // top yellow window pink bottom
+    10% 19%, // top yellow window frame
+    13% 50.5%, // yellow roof main
+    13% 50%, // yellow roof main
+    6% 14%, // yellow roof thing
+    6% 14%, // yellow roof thing
+    40% 40%, // roof outline
+    40% 40%, // roof outline
+    6.5% 7%, // bottom green window brown top
+    4.5% 6%, // bottom green window brown bottom
+    8% 9%, // bottom green window pink top
+    6.5% 8%, // bottom green window pink bottom
+    10% 19%, // bottom green window frame
+    31% 2%, // white beam across green
+    29% 43%, // green front
+    23% 7.4%, // white stair
+    15% 2%, // white door frame top
+    13% 19.5%, // white door frame main
+    22% 7%, // brown stairs
+    40% 5%, // top white beam
+    15.5% 5%, // bottom white beam
+    12.5% 4%, // brown thing at bottom left
+    15.5% 7%, // pink thing at bottom left
+    15% 1%, // white railing
+    2.5% 43%, // right white beam
+    4.2% 3.5%, // bottom left window brown top
+    3.5% 2.6%, // bottom left window brown bottom
+    6% 6%, // bottom left window pink frame top
+    5% 5%, // bottom left window pink frame bottom
+    8% 11%, // bottom left window white window frame
+    2.5% 38%, // left white beam
+    43% 1%, // white horizontal ladder top
+    43% 1%, // white horizontal ladder bottom
+    45% 5%, // front wood floor
+    43% 30%, // pink wall
+    43% 10%, // dark blue wall
+    2.4% 2.7%, // left window brown top
+    2% 2.5%, // left window brown bottom
+    3.5% 4%, // left window pink frame top
+    2.9% 3.2%, // left window pink frame bottom
+    5% 9%, // left window white window frame
+    4.5% 15%, // left window yellow triangle
+    4.5% 15%, // left window yellow triangle
+    9% 10%, // left window square
+    8.9% 16%, // small roof outline
+    8.9% 16%, // small roof outline
+    7% 15%, // chimney
+    45% 26%, // roof
+    30% 32.5%, // roof
+    30% 22% // roof
+    ;
+  min-height: 40rem;
+  margin-top: 25rem;
+  position: relative;
+  transform: translateY(5rem);
+  width: 43rem;
+}
+
+.house:before {
+  content: '';
+  height: 25rem;
+  background-image: 
+    radial-gradient(farthest-corner at 50% 7%, $balloonLightPurple 60%, transparent 40%), // light purple balloon
+    radial-gradient(circle, $balloonLightPurple 50%, transparent 50%), // light purple balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonGreen 60%, transparent 40%), // green balloon
+    radial-gradient(circle, $balloonGreen 50%, transparent 50%), // green balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonPurple 60%, transparent 40%), // purple balloon
+    radial-gradient(circle, $balloonPurple 50%, transparent 50%), // purple balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonYellow 60%, transparent 40%), // yellow balloon
+    radial-gradient(circle, $balloonYellow 50%, transparent 50%), // yellow balloon
+    radial-gradient(farthest-corner at 50% 7%, $darkPink 60%, transparent 40%), // darkPink balloon
+    radial-gradient(circle, $darkPink 50%, transparent 50%), // orange balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonRed 60%, transparent 40%), // red balloon
+    radial-gradient(circle, $balloonRed 50%, transparent 50%), // red balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonOrange 60%, transparent 40%), // orange balloon
+    radial-gradient(circle, $balloonOrange 50%, transparent 50%), // orange balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonLightBlue 60%, transparent 40%), // light blue balloon
+    radial-gradient(circle, $balloonLightBlue 50%, transparent 50%), // light blue balloon
+    
+    radial-gradient(farthest-corner at 50% 7%, $balloonMediumBlue 60%, transparent 40%), // red balloon
+    radial-gradient(circle, $balloonMediumBlue 50%, transparent 50%), // red balloon
+    
+    radial-gradient(farthest-corner at 50% 7%, $balloonLightPink 60%, transparent 40%), // light pink balloon
+    radial-gradient(circle, $balloonLightPink 50%, transparent 50%), // light pink balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonDarkPink 60%, transparent 40%), // dark pink balloon
+    radial-gradient(circle, $balloonDarkPink 50%, transparent 50%), // dark pink balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonDarkRed 60%, transparent 40%), // dark red balloon
+    radial-gradient(circle, $balloonDarkRed 50%, transparent 50%), // dark red balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonPeach 60%, transparent 40%), // peach balloon
+    radial-gradient(circle, $balloonPeach 50%, transparent 50%), // peach balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonGold 60%, transparent 40%), // gold balloon
+    radial-gradient(circle, $balloonGold 50%, transparent 50%), // gold balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonRoyalBlue 60%, transparent 40%), // royal blue balloon
+    radial-gradient(circle, $balloonRoyalBlue 50%, transparent 50%), // royal blue balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonRoyalPurple 60%, transparent 40%), // royal purple balloon
+    radial-gradient(circle, $balloonRoyalPurple 50%, transparent 50%), // royal purple balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonLightGreen 60%, transparent 40%), // light green balloon
+    radial-gradient(circle, $balloonLightGreen 50%, transparent 50%), // light green balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonGreen 60%, transparent 40%), // green balloon
+    radial-gradient(circle, $balloonGreen 50%, transparent 50%), // green balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonBlue 60%, transparent 40%), // blue balloon
+    radial-gradient(circle, $balloonBlue 50%, transparent 50%), // blue balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonPurple 60%, transparent 40%), // purple balloon
+    radial-gradient(circle, $balloonPurple 50%, transparent 50%), // purple balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonOrange 60%, transparent 40%), // orange balloon
+    radial-gradient(circle, $balloonOrange 50%, transparent 50%), // orange balloon
+    radial-gradient(farthest-corner at 50% 7%, $balloonRed 60%, transparent 40%), // red balloon
+    radial-gradient(circle, $balloonRed 50%, transparent 50%), // red balloon
+    linear-gradient(85deg, transparent 46.5%, $white 46.5% 53.5%, transparent 53.5%), // rope
+    linear-gradient(80deg, transparent 47%, $white 47% 53%, transparent 53%), // rope
+    linear-gradient(75deg, transparent 47.5%, $white 47.5% 52.5%, transparent 52.5%), // rope
+    linear-gradient(70deg, transparent 48%, $white 48% 52%, transparent 52%), // rope
+    linear-gradient(95deg, transparent 46.5%, $white 46.5% 53.5%, transparent 53.5%), // rope
+    linear-gradient(100deg, transparent 47%, $white 47% 53%, transparent 53%), // rope
+    linear-gradient(105deg, transparent 47.5%, $white 47.5% 52.5%, transparent 52.5%), // rope
+    linear-gradient(110deg, transparent 48%, $white 48% 52%, transparent 52%), // rope
+    linear-gradient($white, $white); // rope
+  background-size:
+    10.2% 15%, // light purple balloon
+    15% 15%, // light purple balloon
+    10.2% 15%, // green balloon
+    15% 15%, // green balloon
+    10.2% 15%, // purple balloon
+    15% 15%, // purple balloon
+    10.2% 15%, // yellow balloon
+    15% 15%, // yellow balloon
+    10.2% 15%, // dark pink balloon
+    15% 15%, // dark pink balloon
+    10.2% 15%, // red balloon
+    15% 15%, // red balloon
+    10.2% 15%, // orange balloon
+    15% 15%, // orange balloon
+    10.2% 15%, // light blue balloon
+    15% 15%, // light blue balloon
+    10.2% 15%, // red balloon
+    15% 15%, // red balloon
+    10.2% 15%, // light pink balloon
+    15% 15%, // light pink balloon
+    10.2% 15%, // dark pink balloon
+    15% 15%, // dark pink balloon
+    10.2% 15%, // dark red balloon
+    15% 15%, // dark red balloon
+    10.2% 15%, // peach balloon
+    15% 15%, // peach balloon
+    10.2% 15%, // gold balloon
+    15% 15%, // gold balloon
+    10.2% 15%, // royal blue balloon
+    15% 15%, // royal blue balloon
+    10.2% 15%, // royal purple balloon
+    15% 15%, // royal purple balloon
+    10.2% 15%, // light green balloon
+    15% 15%, // light green balloon
+    10.2% 15%, // green balloon
+    15% 15%, // green balloon
+    10.2% 15%, // blue balloon
+    15% 15%, // blue balloon
+    10.2% 15%, // purple balloon
+    15% 15%, // purple balloon
+    10.2% 15%, // orange balloon
+    15% 15%, // orange balloon
+    10.2% 15%, // red balloon
+    15% 15%, // red balloon
+    5% 37%, // rope
+    5% 35%, // rope
+    8% 31%, // rope
+    8% 27%, // rope
+    5% 37%, // rope
+    5% 35%, // rope
+    8% 31%, // rope
+    8% 27%, // rope
+    0.5% 38%; // rope
+   
+  background-position:
+    52% 44.2%, // light purple balloon
+    52.2% 35.8%, // light purple balloon
+    51.8% 25.2%, // green balloon
+    52% 18.8%, // green balloon
+    37% 34.2%, // purpleballoon
+    36.3% 26.8%, // purple balloon
+    39% 70.2%, // yellow balloon
+    38.5% 62.8%, // yellow balloon
+    55% 65.2%, // dark pink balloon
+    55.2% 54.4%, // dark pink balloon
+    50% 58.2%, // red balloon
+    50% 50%, // red balloon
+    35% 53.2%, // yellow balloon
+    34.2% 45.4%, // yellow balloon
+    65% 56.2%, // light blue balloon
+    66% 46.8%, // light blue balloon
+    45.7% 62.2%, // blue balloon
+    45.4% 54%, // blue balloon
+    30% 45.2%, // light pink balloon
+    29% 37.8%, // light pink balloon
+    66% 30.2%, // dark pink balloon
+    67% 22.8%, // dark pink balloon
+    34% 26.2%, // dark red balloon
+    33% 18.8%, // dark red balloon
+    48% 8.4%, // peach balloon
+    48% 0%, // peach balloon
+    44% 32.2%, // gold balloon
+    43.8% 24.8%, // gold balloon
+    57% 50.2%, // royal blue balloon
+    57.5% 42.8%, // royal blue balloon
+    41% 50.2%, // royal purple balloon
+    40.6% 42.8%, // royal purple balloon
+    59% 30.2%, // light green balloon
+    60% 22.4%, // light green balloon
+    69% 45.2%, // green balloon
+    70% 37.8%, // green balloon
+    40.4% 12.2%, // blue balloon
+    40% 4.8%, // blue balloon
+    58.6% 13.2%, // purple balloon
+    59% 5.8%, // purple balloon
+    62% 70.2%, // orange balloon
+    62.7% 62.8%, // orange balloon
+    50% 58.2%, // red balloon
+    50% 50%, // red balloon
+    48.5% 100%, // rope
+    47% 100%, // rope
+    45.4% 100%, // rope
+    44% 100%, // rope
+    51.5% 100%, // rope
+    53% 100%, // rope
+    54.5% 100%, // rope
+    56% 100%, // rope
+    50% 100%, // rope
+    ;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-top: -25rem;
+  width: 100%;
+}
+
+.house:after {
+  background-color: $shadow;
+  border-radius: 50%;
+  bottom: 0;
+  content: '';
+  left: 30%;
+  opacity: 0.65;
+  height: 5%;
+  position: absolute;
+  width: 40%;
+  animation: shadow-hover ease-in-out 1.7s infinite;
+}
+
+@keyframes house-hover {
+  50% {
+    transform: translateY(3rem);
+  }
+}
+
+@keyframes shadow-hover {
+  50% {
+    transform: scale(1.2) translateY(1.7rem);
+    opacity: 0.5;
+  }
+}
